@@ -42,56 +42,56 @@ function moveText() {
 function addToCart(e) {
     cart = document.getElementById("cartDiv");
     switch (e.id) {
-        case "addFelix":
-            qty = document.getElementById("felixQty").value;
+        case "addZupreem":
+            qty = document.getElementById("zupreemQty").value;
             cart
                 .insertAdjacentHTML(
                     'beforeend',
-                    '<p>Felix: <input type="number" class="cartInput" id = "cartFelix" pName = "Felix" price="3.2" value="'
+                    '<p>Zupreem: <input type="number" class="cartInput" id = "cartZupreem" pName = "Zupreem" price="3.2" value="'
                     + qty
                     + '"> Price:$'
                     + (Number(qty) * 3.2)
                     + '</p>');
             break;
-        case "addFriskies":
-            qty = document.getElementById("friskiesQty").value;
+        case "addHarrison":
+            qty = document.getElementById("harrisonQty").value;
             cart
                 .insertAdjacentHTML(
                     'beforeend',
-                    '<p>Friskies: <input type="number" class="cartInput" id = "cartFriskies" pName = "Friskies" price="2.9" value="'
+                    '<p>Harrison: <input type="number" class="cartInput" id = "cartHarrison" pName = "Harrison" price="2.9" value="'
                     + qty
                     + '"> Price:$'
                     + (Number(qty) * 2.9)
                     + '</p>');
             break;
-        case "addPedigree":
-            qty = document.getElementById("pedigreeQty").value;
+        case "addRoudybush":
+            qty = document.getElementById("roudybushQty").value;
             cart
                 .insertAdjacentHTML(
                     'beforeend',
-                    '<p>Pedigree: <input type="number" class="cartInput" id = "cartPedigree" pName = "Pedigree" price="9" value="'
+                    '<p>RoudyBush: <input type="number" class="cartInput" id = "cartRoudybush" pName = "RoudyBush" price="9" value="'
                     + qty
                     + '"> Price:$'
                     + (Number(qty) * 9)
                     + '</p>');
             break;
-        case "addPurina":
-            qty = document.getElementById("purinaQty").value;
+        case "addKiki":
+            qty = document.getElementById("kikiQty").value;
             cart
                 .insertAdjacentHTML(
                     'beforeend',
-                    '<p>Purina: <input type="number" class="cartInput" id = "cartPurina" pName = "Purina" price="4.5" value="'
+                    '<p>Kiki: <input type="number" class="cartInput" id = "cartKiki" pName = "Kiki" price="4.5" value="'
                     + qty
                     + '"> Price:$'
                     + (Number(qty) * 4.5)
                     + '</p>');
             break;
-        case "addFrankiefish":
-            qty = document.getElementById("frankiefishQty").value;
+        case "addRaff":
+            qty = document.getElementById("raffQty").value;
             cart
                 .insertAdjacentHTML(
                     'beforeend',
-                    '<p>Frankie & Fish: <input type="number" class="cartInput" id = "cartFrankiefish" pName = "Frankiefish" price="2.32" value="'
+                    '<p>Raff: <input type="number" class="cartInput" id = "cartRaff" pName = "Raff" price="2.32" value="'
                     + qty
                     + '"> Price:$'
                     + (Number(qty) * 2.32)
@@ -136,34 +136,34 @@ function invoice() {
             console.log(cart[i].id);
             qty = cart[i].value;
             switch (cart[i].id) {
-                case "cartFelix":
+                case "cartZupreem":
                     voiceContent.insertAdjacentHTML(
                         'beforeend',
-                        '<p class = "items">Felix: Qty:'+ qty +' Price:$' + (Number(qty) * 3.2)+ '</p>');
+                        '<p class = "items">Zupreem: Qty:'+ qty +' Price:$' + (Number(qty) * 3.2)+ '</p>');
                     Total += (Number(qty) * 3.2);
                     break;
-                case "cartFriskies":
+                case "cartHarrison":
                     voiceContent.insertAdjacentHTML(
                         'beforeend',
-                        '<p class = "items">Friskies: Qty:'+ qty +' Price:$' + (Number(qty) * 2.9)+ '</p>');
+                        '<p class = "items">Harrison: Qty:'+ qty +' Price:$' + (Number(qty) * 2.9)+ '</p>');
                     Total += (Number(qty) * 2.9);
                     break;
-                case "cartPedigree":
+                case "cartRoudybush":
                     voiceContent.insertAdjacentHTML(
                         'beforeend',
-                        '<p class = "items">Pedigree: Qty:'+ qty +' Price:$' + (Number(qty) * 9)+ '</p>');
+                        '<p class = "items">Roudybush: Qty:'+ qty +' Price:$' + (Number(qty) * 9)+ '</p>');
                     Total += (Number(qty) * 9);
                     break;
-                case "cartPurina":
+                case "cartKiki":
                     voiceContent.insertAdjacentHTML(
                         'beforeend',
-                        '<p class = "items">Purina: Qty:'+ qty +' Price:$' + (Number(qty) * 4.5)+ '</p>');
+                        '<p class = "items">Kiki: Qty:'+ qty +' Price:$' + (Number(qty) * 4.5)+ '</p>');
                     Total += (Number(qty) * 4.5);
                     break;
-                case "cartFrankiefish":
+                case "cartRaff":
                     voiceContent.insertAdjacentHTML(
                         'beforeend',
-                        '<p class = "items">Frankie & Fish: Qty:'+ qty +' Price:$' + (Number(qty) * 2.32)+ '</p>');
+                        '<p class = "items">Raff: Qty:'+ qty +' Price:$' + (Number(qty) * 2.32)+ '</p>');
                     Total += (Number(qty) * 2.32);
                     break;
                 default:
