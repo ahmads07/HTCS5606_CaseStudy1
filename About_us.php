@@ -7,18 +7,23 @@
     <script src="JS/script.js"></script>
 </head>
 <body onload="moveAd(), moveText(), invoice()">
+
+<?php
+include_once "header.php";
+?>
+
 <div id = "header">
     <img src="Image/pets-min.jpg">
     <div id="logo"><span id = "logoText"><strong><u>Pet Zone</u></strong></span></div>
 </div>
 <div id = "nav">
     <ul>
-        <li><a href="index.html" >Home</a></li>
+        <li><a href="index.php" >Home</a></li>
         <li><a href="Cat_Food.html">Cat</a></li>
         <li><a href="Dog_Food.html">Dog</a></li>
         <li><a href="Bird.html">Bird</a></li>
         <li><a href="Other_Pet.html">Pet Other</a></li>
-        <li><a href="About_us.html">About us</a></li>
+        <li><a href="About_us.php">About us</a></li>
     </ul>
 </div>
 <div id = "Main">
@@ -72,7 +77,9 @@
 
 </div>
 
-<div id="footer">&copy; School of Computing and Information, Unitec, NZ</div>
+<?php
+include_once "header.php";
+?>
 
 </body>
 </html>

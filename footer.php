@@ -1,0 +1,1 @@
+<div id="footer">&copy; School of Computing and Information, Unitec, NZ</div>
